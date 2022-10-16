@@ -1,1 +1,21 @@
-<p>products works!</p>
+<div class="container">
+  <ul>
+    <li *ngFor="let product of productData">
+      <img [src]="product.ProductImg" alt="image" />
+      <div>
+        <h3>{{ product.ProductName }}</h3>
+        <h5>
+          Price: <span>{{ product.ProductPrice | currency }}</span>
+        </h5>
+        <h5>
+          Available: <span>{{ product.AvailablePieces }}</span
+          >Piece
+          <p *ngIf="product.AvailablePieces < 5 && product.AvailablePieces > 0">
+            Low Amount
+          </p>
+          <p *ngIf="product.AvailablePieces == 0">Out of stock</p>
+        </h5>
+      </div>
+    </li>
+  </ul>
+</div>

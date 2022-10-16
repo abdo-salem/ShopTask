@@ -11,7 +11,7 @@ body {
 
 .default {
   background-color: rgb(70, 145, 168);
-  color: #fff;
+  color: #e8f1f2;
 }
 
 ul {
@@ -20,4 +20,8 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.active {
+  background-color: rgb(36, 109, 131);
 }

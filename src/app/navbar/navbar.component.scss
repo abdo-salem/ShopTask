@@ -1,0 +1,22 @@
+nav {
+  .container {
+    width: 90%;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    li {
+      font-size: 20px;
+      text-transform: capitalize;
+      padding: 15px;
+      a {
+        color: #e8f1f2;
+        padding: 15px;
+        &:hover {
+          background-color: rgb(36, 109, 131);
+        }
+      }
+    }
+  }
+}
