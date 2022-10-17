@@ -1,4 +1,4 @@
-<table class="table">
+<table>
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -8,7 +8,13 @@
       <th scope="col">Total Amount</th>
     </tr>
   </thead>
-  <tbody *ngFor="let item of orderData; let i = index">
+  <tbody
+    *ngFor="
+      let item of orderData
+        | paginate: { itemsPerPage: 10, currentPage: p, totalItems: 122 };
+      let i = index
+    "
+  >
     <tr>
       <th>{{ i + 1 }}</th>
       <td>{{ item.OrderId }}</td>
@@ -18,8 +24,10 @@
     </tr>
   </tbody>
 </table>
-<!-- "Products": [
-      { "ProductId": 124, "Quantity": 2 },
-      { "ProductId": 127, "Quantity": 1 },
-      { "ProductId": 130, "Quantity": 1 }
-    ], -->
+<div class="paging">
+  <pagination-controls
+    previousLabel="Prev"
+    nextLabel="Next"
+    (pageChange)="onTableDataChange($event)"
+  ></pagination-controls>
+</div>
