@@ -8,7 +8,13 @@
           Price: <span>{{ product.ProductPrice | currency }}</span>
         </h5>
         <h5>
-          Available: <span>{{ product.AvailablePieces }}</span
+          Available:
+          <span
+            [ngClass]="{
+              warn: product.AvailablePieces < 5,
+              empty: product.AvailablePieces == 0
+            }"
+            >{{ product.AvailablePieces }}</span
           >Piece
           <p *ngIf="product.AvailablePieces < 5 && product.AvailablePieces > 0">
             Low Amount

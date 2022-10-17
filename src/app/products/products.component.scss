@@ -30,12 +30,19 @@
         }
         h5 {
           color: rgb(50, 104, 121);
-          font-size: 15px;
+          font-size: 17px;
+          .warn {
+            color: rgb(199, 130, 130);
+          }
+          .empty {
+            color: rgb(199, 130, 130);
+            text-decoration: line-through;
+          }
           span {
             display: inline-block;
             color: rgb(89, 172, 197);
             margin: 10px;
-            font-size: 18px;
+            font-size: 20px;
           }
           p {
             color: rgb(199, 130, 130);
