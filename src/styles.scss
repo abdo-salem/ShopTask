@@ -33,8 +33,11 @@ a {
 
 .paging {
   text-align: center;
-  margin-bottom: 50px;
-  color: rgb(70, 145, 168);
+  margin: 40px auto;
+  font-size: 18px;
+  .ngx-pagination a {
+    color: rgb(70, 145, 168) !important;
+  }
 }
 
 .footer {
