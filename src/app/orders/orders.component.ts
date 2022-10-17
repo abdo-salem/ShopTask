@@ -11,14 +11,15 @@ export class OrdersComponent implements OnInit {
   orderData: any[] = orders;
   productData: any[] = products;
   prices: any[] = [];
+  p: number = 1;
 
   constructor() {}
 
   ngOnInit(): void {
-    this.getPrice();
+    this.getData();
   }
 
-  getPrice() {
+  getData() {
     this.orderData.forEach((order) => {
       let total = 0;
       order.Products.map((prod: any) => {
@@ -29,5 +30,11 @@ export class OrdersComponent implements OnInit {
       });
       this.prices.push(total);
     });
+  }
+
+  //  table pagination
+  onTableDataChange(event: any) {
+    this.p = event;
+    this.getData();
   }
 }

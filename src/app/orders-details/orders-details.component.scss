@@ -1,0 +1,50 @@
+table {
+  margin: 30px auto;
+  text-align: center;
+  width: 90%;
+  font-size: 20px;
+  border-collapse: collapse;
+  border-radius: 10px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  thead {
+    color: rgb(70, 145, 168);
+    background-color: #e8f1f2;
+    th {
+      padding: 15px 15px;
+    }
+  }
+  tbody {
+    tr {
+      th {
+        color: rgb(50, 104, 121);
+      }
+      td {
+        padding: 13px 0px;
+        color: rgb(70, 145, 168);
+        ul {
+          li {
+            padding: 7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+}
+
+@media (max-width: 767px) {
+  table {
+    width: 100%;
+  }
+}
